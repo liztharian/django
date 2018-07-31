@@ -28,30 +28,10 @@
             <a class="navbar-brand" href="/">Social Network</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            {% if user.is_authenticated %}
-
-            <ul class="nav navbar-nav">
-              <li><a href="{% url 'app:home'%}">Home</a></li>
-              <li><a href="{% url 'app:view_profile'
-              %}">Profile</a></li>
-              <li><a href="{% url 'app:change-password' %}">change
-              password<a</li>
-                </ul>
-              {% else %}
-              <ulclass="nav navbar-nav">
-                 <li><a href="{% url 'app:reset_password' %}">Reset
-                   password</a></li>
-
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'app:login' %}">Login</a></li>
-              <li><a href="{% url 'app:register'
-              %}">Register</a></li>
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="app/register">Register</a></li>
             </ul>
-              {% endif %}
-            </div>
-          </div>
-          </><!--/.nav-collapse -->
+          </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
 {% block body %}
   <h1>base</h1>

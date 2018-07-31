@@ -1,16 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
 
-<html>
- <head>
-  <title>login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- </head>
- <div class="container">
-   <h1> welcome</h1>
-    <body>
-     welcome, you can login here
-    <button class="btn btn-default" type="button" name="button">  login </button>
 
-  </div>
+    <h1>Welcome</h1>
+    <p>
+      You can login here
+    </p>
+    <h2> Login</h2>
+    <form  method="post">
+     {% csrf_token %}
 
-    </body>
-</html>
+     {{ form.as_p }}
+     <button type="submit">submit</button>
+    </form>
+</div>
+{% endblock %}
