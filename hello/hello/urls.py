@@ -20,7 +20,6 @@ from hello import views
 urlpatterns = [
     url(r'^$',views.login_redirect,name='login_redirect'),
     url(r'^admin/',admin.site.urls),
-    url(r'^app/',include('app.urls')),
-
-    url(r'^home/',include('home.urls')),
+    url(r'^app/', include('app.urls', namespace='app')),
+    url(r'^home/', include('home.urls', namespace='home')),
 ]

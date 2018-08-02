@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'app',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -123,4 +123,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-LOGIN_REDIRECT_URL='/app/'
+LOGIN_REDIRECT_URL='/app'
